@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KJ Clan Leaderboard</title>
+
+<style>
+body{
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+    padding:20px;
+}
+h1{
+    text-align:center;
+    color:gold;
+}
+.player{
+    background:#222;
+    border:2px solid crimson;
+    border-radius:10px;
+    padding:15px;
+    margin:10px 0;
+}
+</style>
+
+</head>
+<body>
+
+<h1>🏆 KJ Clan Leaderboard</h1>
+
+<div id="leaderboard"></div>
+
+<script>
+const players = [
+{rank:1,name:"CRIM",tier:"S"},
+{rank:2,name:"Bally",tier:"A+"},
+{rank:3,name:"Luigi",tier:"A"},
+{rank:4,name:"Kian",tier:"A"},
+{rank:5,name:"Shixz",tier:"A"},
+{rank:6,name:"Voided",tier:"A-"},
+{rank:7,name:"Nyth",tier:"B+"},
+{rank:8,name:"Zy",tier:"B+"},
+{rank:9,name:"Mine",tier:"B"}
+];
+
+const leaderboard = document.getElementById("leaderboard");
+
+players.forEach(player=>{
+    leaderboard.innerHTML += `
+        <div class="player">
+            <h2>#${player.rank} ${player.name}</h2>
+            <p>Tier: ${player.tier}</p>
+        </div>
+    `;
+});
+</script>
+
+</body>
+</html>
